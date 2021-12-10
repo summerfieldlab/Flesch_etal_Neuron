@@ -1,0 +1,61 @@
+
+
+
+
+<div class="screenBox">
+
+  <!-- TITLE -->
+  <div class="titleBox">
+    <span class="titleSpan"> INSTRUCCIONES </span>
+  </div>
+
+  <!-- BODY -->
+  <div class="bodyBox">
+    <h1 style="text-align: center">
+
+    </h1>
+    <h2>¡TEN PACIENCIA!</h2>
+    <p>
+      <b>La tarea se cargará en unos segundos (aproximadamente 25MB).</b> A menos que tengas una conexión lenta, eso debería durar menos de cinco minutos en total.
+    </p>
+    <h2>Descripción</h2>
+    <p>
+      En ese experimento juzgarás la semejanza de diferentes imágenes de árboles. <br> Te daremos instrucciones detalladas una vez que accedas a la pantalla completa y hagas clic en el botón "Inicio".
+    </p>
+    <h2>Requisito de pantalla completa</h2>
+    <p>
+      Te pedimos que mantengas la ventana en modo de pantalla completa durante el experimento. Eso es porque el experimento es psicológico y necesitamos que completes el experimento sin distracciones y sin hacer otras cosas al mismo tiempo. <b>Si abandonas el modo de pantalla completa se cancelará el experimento.</b>.
+    </p>
+    <!-- <h2>Duration and payment</h2>
+    <p>
+      During this experiment, you will need to give a fixed number of responses. The task is self-paced. The total duration of the experiment is estimated to be around <b>10 min</b>. However, even though the duration of the whole experiment depends on how quickly you respond, we ask you to try your best, rather than just giving quick but careless responses!<br>
+      Once you finish with the task, you will receive a code that you can paste in order for us to accept your HIT.
+    </p> -->
+    <h2>¡Prepárate!</h2>
+    <p>
+      Después de leer esto, puedes continuar con las instrucciones. ¡Buena suerte!
+    </p>
+  </div>
+
+
+  <!-- START BUTTON -->
+  <button class="buttonBox"
+          type="button"
+          onClick="if(isFullscreen()) {setExperiment();goWebsite(html_loading);startLoading();} "
+          id="startButton"
+          disabled>
+         comienzo
+  </button>
+
+  <!-- FULLSCREEN BUTTON -->
+  <button class="buttonBox fullscreenBox"
+          type="button"
+          onClick="
+            onFullscreen();
+            document.getElementById('startButton').disabled = false;
+            "
+          id="fullButton">
+         Activar el modo pantalla completa
+  </button>
+
+</div>

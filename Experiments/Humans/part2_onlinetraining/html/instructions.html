@@ -1,0 +1,50 @@
+
+
+
+
+<div class="screenBox">
+
+  <!-- TITLE -->
+  <div class="titleBox">
+    <span class="titleSpan"> INSTRUCTIONS </span>
+  </div>
+
+  <!-- BODY -->
+  <div class="bodyBox">
+    <h1 style="text-align: center">
+
+    </h1>
+    <h2>Ten paciencia!</h2>
+    <p>
+      <b> La tarea está cargando, pero contiene muchos archivos (casi 50 MB)</b>. Si no tienes una conexión muy lenta, no estaría cargando mas de 5 minutos en total.
+    </p>
+    <p>
+ Durante la tarea habrá unos descansos y verás instrucciones detalladas cuando pulsas el botón "comienzo".
+    </p>
+
+    <h2>Prepárate!</h2>
+    <p>
+      Si lees estas líneas puedes continuar con las instrucciones. Buena suerte!
+    </p>
+  </div>
+  <!-- BUTTON -->
+  <button class="buttonBox"
+          type="button"
+          onClick="if(isFullscreen()) {setExperiment();goWebsite(html_loading);startLoading();} "
+          id="startButton"
+          disabled>
+         Start
+  </button>
+
+  <!-- FULLSCREEN -->
+  <button class="buttonBox fullscreenBox"
+          type="button"
+          onClick="
+            onFullscreen();
+            document.getElementById('startButton').disabled = false;
+            "
+          id="fullButton">
+         Go fullscreen
+  </button>
+
+</div>

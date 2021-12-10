@@ -1,0 +1,68 @@
+<div class="screenBox">
+
+  <!-- TITLE -->
+  <div class="titleBox">
+    <span class="titleSpan"> FORMULARIO DE PARTICIPANTE </span>
+  </div>
+
+  <!-- FORM -->
+  <form action="javascript:getTurkerform();goWebsite(html_instructions);" method="POST">
+    <!-- BODY -->
+    <div class="bodyBox">
+      <p>Queríamos preguntarte algunos detalles sobre ti. No registraremos nada sobre ti que pueda identificarte. Esto es sólo para que podamos ver si hay alguna tendencia en los resultados. </p>
+      <!-- <p>Also, the MTurker ID will be used to make sure to make sure we pay you!</p> -->
+      <br>
+      <table style="position:         absolute;
+                    width:            300px;
+                    left:             50%;
+                    margin-left:      -150px;
+                    border-collapse:  collapse;">
+        <tr>
+          <td style="padding-top:10px; padding-bottom:10px;">
+            <b>Género</b>
+          </td>
+          <td>
+            <select id="genderSelect" required>
+                <option selected value=""      >seleccionar</option>
+                <option          value="male"  >masculino  </option>
+                <option          value="female">femenino</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-top:10px; padding-bottom:10px;">
+            <b>Años</b>
+          </td>
+          <td>
+            <select id="ageSelect" required>
+              <option selected value=""     >seleccionar</option>
+              <option          value="18-20">18-20 </option>
+              <option          value="21-30">21-30 </option>
+              <option          value="31-40">31-40 </option>
+              <option          value="41-50">41-50 </option>
+              <option          value="51-60">51-60 </option>
+              <option          value="61+"  >61+     </option>
+            </select>
+          </td>
+        </tr>
+        <!-- <tr>
+          <td style="padding-top:10px; padding-bottom:10px;">
+            <b>Amazon Mechanical Turk Worker ID</b>
+          </td>
+          <td>
+            <input type="text" id="turkerSelect"><br>
+          </td>
+        </tr> -->
+      </table>
+
+    </div>
+
+    <!-- BUTTON -->
+    <button class="buttonBox"
+            type="submit">
+           Enviar
+    </button>
+
+  </form>
+
+</div>

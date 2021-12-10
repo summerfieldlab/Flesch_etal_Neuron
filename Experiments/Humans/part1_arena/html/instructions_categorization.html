@@ -1,0 +1,63 @@
+
+<div class="screenBox">
+
+  <!-- TITLE -->
+  <div class="titleBox">
+    <span class="titleSpan"> INSTRUCTIONS </span>
+  </div>
+
+  <!-- BODY -->
+  <div class="bodyBox">
+    <p>
+      Congratulations!<br>
+    </p>
+    <p>
+    You're done with the first half of the experiment. Please read the instructions below and continue with the categorization task!
+    </p>
+    <p>
+     
+    <b>Categorization Task</b> <br> <br>
+    
+    In this second half of the experiment, you'll classify single tree images on each trial, according to a particular rule. <br><br>
+    There'll be two rules:<br>
+    1. Classify the tree according to whether it is branchy (=has many branches) or not. <br>
+    2. Classify the tree according to whether it is leafy (=has many leafes) or not. <br><br>
+    In the first half of the categorization task, you'll have to use one rule, whereas in the second half, you'll have to use the other rule. <br>
+    The rule that you have to use is displayed during the experiment <br><br>
+
+    Each trial is structured as follows: <br>
+    At first, you'll briefly see a black fixation dot in the center of the screen. <br>
+    Then, an image of a tree will be displayed. <br>
+    Using the left and right arrow key, you'll have to indicate to which category the tree belongs. <br>
+    After you've pressed a button, you'll receive feedback indicating whether your choice was correct or not. <br>
+    <br>
+    For example, if your task is to say whether a tree is leafy or not leafy, and you see a really branchy tree with no leafes on it, you'd press the key assigned to the response "No"<br>
+    Later, when the task is to distinguish between branchy and not branchy and you see the same stimulus again, you'd press "yes", to communicate that it is a quite branchy tree.<br>
+    <br>
+    </p>
+     <p>
+      At the end of the experiment, you might only see a white screen and nothing else. Please be patient! The data is being sent. If it takes longer than 10 minutes and you don't receive your verification code, send us an email (hiplab@psy.ox.ac.uk).
+    </p>
+  </div>
+  
+  <!-- BUTTON -->
+  <button class="buttonBox"
+          type="button"
+          onClick="if(isFullscreen()) {startCategorizationExperiment();} "
+          id="startButton"
+          enabled>
+         Start
+  </button>
+  
+  <!-- FULLSCREEN -->
+  <!-- <button class="buttonBox fullscreenBox"
+          type="button"
+          onClick="
+            onFullscreen();
+            document.getElementById('startButton').disabled = false;
+            "
+          id="fullButton">
+         Go fullscreen
+  </button>
+   -->
+</div>

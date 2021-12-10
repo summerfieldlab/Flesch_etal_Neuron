@@ -1,0 +1,107 @@
+
+<!-- LOADING -->
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <meta content="utf-8" http-equiv="encoding">
+</head>
+<body>
+    <img src="lib/gif/loading.gif"
+         style="margin: auto; position: absolute; top: 0px; bottom: 0px; left: 0px; right: 0px;">
+</body>
+
+
+<!-- jquery -->
+<script   src="http://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+<script   src="http://code.jquery.com/ui/1.12.0/jquery-ui.min.js"   integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E="   crossorigin="anonymous"></script>
+
+<!-- SCRIPTS -->
+<script type="application/javascript" src="lib/js/external/jquery-1.11.0.min.js" ></script>
+<script type="application/javascript" src="lib/js/external/jwerty.js"            ></script>
+<script type="application/javascript" src="lib/js/external/raphael.js"           ></script>
+<script type="application/javascript" src="lib/js/external/sprintf.min.js"       ></script>
+
+<script type="application/javascript" src="lib/js/default/log.js"                ></script>
+<script type="application/javascript" src="lib/js/default/missing.js"            ></script>
+<script type="application/javascript" src="lib/js/default/subjects.js"           ></script>
+<script type="application/javascript" src="lib/js/default/text.js"               ></script>
+<script type="application/javascript" src="lib/js/default/time.js"               ></script>
+<script type="application/javascript" src="lib/js/default/web.js"                ></script>
+<script type="application/javascript" src="lib/js/default/postget.js"            ></script>
+
+<script type="application/javascript" src="lib/js/control/clock.js"              ></script>
+<script type="application/javascript" src="lib/js/control/countdown.js"          ></script>
+<script type="application/javascript" src="lib/js/control/screen.js"             ></script>
+
+<script type="application/javascript" src="lib/js/files/files.js"                ></script>
+<script type="application/javascript" src="lib/js/files/flow_load.js"            ></script>
+
+<script type="application/javascript" src="lib/js/graphics/basic.js"             ></script>
+<script type="application/javascript" src="lib/js/graphics/fixation.js"          ></script>
+
+<script type="application/javascript" src="lib/js/matlab/constants.js"           ></script>
+<script type="application/javascript" src="lib/js/matlab/create.js"              ></script>
+<script type="application/javascript" src="lib/js/matlab/normal.js"              ></script>
+<script type="application/javascript" src="lib/js/matlab/operator1vi.js"         ></script>
+<script type="application/javascript" src="lib/js/matlab/operator1vv.js"         ></script>
+<script type="application/javascript" src="lib/js/matlab/operator2vi.js"         ></script>
+<script type="application/javascript" src="lib/js/matlab/operator2vv.js"         ></script>
+<script type="application/javascript" src="lib/js/matlab/random.js"              ></script>
+<script type="application/javascript" src="lib/js/matlab/size.js"                ></script>
+<script type="application/javascript" src="lib/js/matlab/translate.js"           ></script>
+<script type="application/javascript" src="lib/js/matlab/vector.js"              ></script>
+
+<script type="application/javascript" src="js/expt_draw.js"       ></script>
+<script type="application/javascript" src="js/expt_experiment.js" ></script>
+<script type="application/javascript" src="js/expt_hide.js"       ></script>
+<script type="application/javascript" src="js/expt_launcher.js"   ></script>
+<script type="application/javascript" src="js/expt_parameters.js" ></script>
+<script type="application/javascript" src="js/expt_remove.js"     ></script>
+<script type="application/javascript" src="js/expt_response.js"   ></script>
+<script type="application/javascript" src="js/expt_run.js"        ></script>
+<script type="application/javascript" src="js/expt_show.js"       ></script>
+<script type="application/javascript" src="js/expt_turker.js"     ></script>
+<script type="application/javascript" src="js/expt_update.js"     ></script>
+<script type="application/javascript" src="js/expt_conditions.js"      ></script>
+<script type="application/javascript" src="js/expt_instructions.js"></script>
+<script type="application/javascript" src="js/expt_feedback.js"   ></script>
+
+  <!-- javascript -->
+  <script type="text/javascript" src="js/lib/random.js"         ></script>
+  <script type="text/javascript" src="js/lib/math.js"           ></script>
+  <script type="text/javascript" src="js/lib/draw.js"           ></script>
+  <script type="text/javascript" src="js/lib/external/raphael.js"></script>
+
+
+  <!-- php -->
+  <script type="text/php" src="php/io.php"                      ></script>
+
+
+<link href="lib/css/html_templates.css" rel="stylesheet" type="text/css" media="screen" />
+
+<!-- <link rel="stylesheet" type="text/css" href="css/stimeval_design.css"> -->
+
+
+
+<!-- WEBSITE -->
+<script type="text/javascript">
+  startedexperiment  = false;
+  finishedexperiment = false;
+  participant_task = "timo/20181119_granada_ES_training";
+  logStart(participant_task,participant_id);
+
+  document.write('\
+    <!DOCTYPE html>\
+    <html>\
+      <head>\
+        <title>'+participant_task+'</title>\
+      </head>\
+      <body>\
+          <div id="webbodyDiv"></div>\
+      </body>\
+    </html>\
+  ');
+  $(document).on('webkitfullscreenchange mozfullscreenchange fullscreenchange',finishExperiment_resize);
+  // startExperiment();
+  goWebsite(html_start)
+  // goWebsite(html_instructions); //startExperiment();
+</script>
