@@ -1,11 +1,43 @@
+import torch
 from pathlib import Path
 from utils.trainer import train_cnn
-from utils.models import CustomAlexNet
+from utils.models import SmallCNN, CNN, CustomAlexNet
 from cnn_parameters import parser
 from utils.nnet import get_device
 from utils.data import gen_datasets
 import pickle
 from joblib import Parallel, delayed
+
+def rich_init(m):
+    """applies rich initialisation to cnn
+       note: the standard init is already in the rich regime
+       and slightly more stable than this.
+
+    Args:
+        m (pytorch model layer): instance of neural network layer
+    """
+    if isinstance(m,torch.nn.Conv2d):
+        # print(m.__class__.__name__)
+        torch.nn.init.normal_(m.weight,mean=0,std=0.005)
+    elif isinstance(m,torch.nn.Linear):
+        # print(m.__class__.__name__)
+        torch.nn.init.normal_(m.weight,mean=0,std=0.004)
+        torch.nn.init.zeros_(m.bias)
+
+def lazy_init(m):
+    """applies lazy initialisation to cnn
+
+    Args:
+        m (pytorch model layer): instance of model layer
+    """
+    if isinstance(m,torch.nn.Conv2d):
+        # print(m.__class__.__name__)
+        torch.nn.init.normal_(m.weight,mean=0,std=0.1)
+    elif isinstance(m,torch.nn.Linear):
+        # print(m.__class__.__name__)
+        torch.nn.init.normal_(m.weight,mean=0,std=0.02)
+        torch.nn.init.zeros_(m.bias)
+
 
 
 def run_experiment(args, model, data, save_dir, fname_results, fname_model):
@@ -60,7 +92,7 @@ def execute_run(i_run, args):
     model = CustomAlexNet(pretrained=True)
     run_experiment(args, model, [dl_train, dl_val, dl_tn, dl_ts], save_dir, fname_results, fname_model)
 
-    # AlexNet from scratch:
+    # AlexNet from scratch (this is the one with rich init):
     # set params
     args.n_epochs = 500
     args.learning_rate = 1e-4
@@ -69,6 +101,22 @@ def execute_run(i_run, args):
     fname_model = 'model.pkl'
     model = CustomAlexNet(pretrained=False)
     run_experiment(args, model, [dl_train, dl_val, dl_tn, dl_ts], save_dir, fname_results, fname_model)
+
+
+    # AlexNet from scratch, lazy learning
+    # set params
+    args.n_epochs = 200
+    args.learning_rate = 1e-4
+    save_dir = Path("cnn_results") / 'alexnet_fromscratch_lazy' / run_id
+    fname_results = 'results.pkl'
+    fname_model = 'model.pkl'
+    nnet = CustomAlexNet(pretrained=False)
+    _ = nnet.apply(lazy_init)
+    # some further fine-tuning of output layer init:
+    torch.nn.init.normal_(nnet.o.weight,mean=0,std=0.001)
+    torch.nn.init.zeros_(nnet.o.bias)
+    # start the fun:
+    run_experiment(args, nnet, [dl_train, dl_val, dl_tn, dl_ts], save_dir, fname_results, fname_model)
 
 
 if __name__ == "__main__":

@@ -17,7 +17,7 @@ function groupRDM = rsa_convert_mni2rdm(coords,sphereSize)
   end
 
   % load mask
-  maskImg = spm_vol(['/media/timo/timodrive/dphil/trees/results/masks/groupMask_rsaSearchlight.nii']);
+  maskImg = spm_vol(['groupMask_rsaSearchlight.nii']);
 
   % get linear indices
   indices = fmri_mask_mni2roi(coords,sphereSize,maskImg);

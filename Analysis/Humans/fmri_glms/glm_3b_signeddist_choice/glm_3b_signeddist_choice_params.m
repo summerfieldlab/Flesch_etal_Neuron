@@ -12,7 +12,7 @@ function params = glm_3b_signeddist_choice_params()
 
     params.glmName = 'glm_3b_signeddist_choice';
     % directories
-    params.projectdir = '/media/timo/data/DPHIL_01_TREES_FMRI/Paper/code/';
+    params.projectdir = '';
     params.dir.imDir = [params.projectdir 'Data/Humans/part3_fmri/fmri_link/'];
     params.dir.conditionDir = [params.projectdir 'Results/Humans/regressors/'];
     params.dir.glmSubDir = [params.glmName '/'];

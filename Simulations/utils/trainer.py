@@ -6,7 +6,7 @@ implementation of nnet simulations reported in the manuscript
 from utils.eval import perform_rsa_cnn
 from utils.data import mk_experiment
 from datetime import datetime
-from models import MLP, MLP_L2
+from utils.models import MLP, MLP_L2
 import torch
 from torch import nn
 import numpy as np

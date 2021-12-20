@@ -16,7 +16,7 @@ function params = fmri_preproc_setParams()
   params.flags.doSegment  = false;
 
   %% Directories
-  params.dir.spmDir = '/home/timo/Documents/MATLAB/Toolboxes/spm12/';
+  params.dir.spmDir = '';
 
   params.dir.imDir        = 'project/data/data_fmri/renamed/';
   params.dir.conditionDir = 'project/data/data_behav/final/fmri_identifiers/scan/conditions/';

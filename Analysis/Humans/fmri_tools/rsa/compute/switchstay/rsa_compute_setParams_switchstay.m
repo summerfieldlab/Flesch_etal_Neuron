@@ -12,7 +12,7 @@ function params = rsa_compute_setParams_switchstay(phaseID)
   params = struct();
 
   %% directories
-  % params.dir.projectDir = '/mnt/big/timo/EXPERIMENTS/EXP_TREES/Granada2/';
+  
   params.dir.projectDir = 'project';
 
   params.dir.behavDir  = [params.dir.projectDir 'exp_3_granada_fmri/results/behav/'];

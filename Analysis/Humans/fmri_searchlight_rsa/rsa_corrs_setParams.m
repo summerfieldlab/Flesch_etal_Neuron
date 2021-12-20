@@ -7,15 +7,15 @@ function params = rsa_corrs_setParams()
 
   params = struct();
 % params.dir.projectDir = 'project';
-% params.dir.projectDir = '/mnt/big/timo/EXPERIMENTS/EXP_TREES/Granada2/';
+
   %% directories
   % directory for behavioural data
   params.dir.behavDir = 'project/results_paper/behav/';
   % directory for dissimilarity ratings
   params.dir.dissimDir = 'projectexp_1_granada_arenatask/results/matfiles/';
   % directory for tree images
-  params.dir.imageDir  = '/media/timo/data/DPHIL_01_TREES_FMRI/Granada_Nov18/exp_3_granada_fmri/task/treestask_fmri/files/stimuli/';
-  params.dir.bgDir     = '/media/timo/data/DPHIL_01_TREES_FMRI/Granada_Nov18/Figures/task/';
+  params.dir.imageDir  = '';
+  params.dir.bgDir     = '';
   % imaging directories
   params.dir.inDir    = 'project/results_paper/GLM_3_RSA/';
   params.dir.inDir2    = 'project/results_paper/GLM_3_RSA/';

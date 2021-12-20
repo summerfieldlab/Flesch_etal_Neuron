@@ -2,7 +2,7 @@ cat("\014")
 library(smacof)
 library(R.matlab)
 rm(list=ls())
-data <- readMat('/media/timo/hiplab-timo/projects/DPHIL_01_EXP_CL_TREES_FMRI/Granada_Complete/exp_3_granada_fmri/results/GLM_8_2_RSA/GROUP/corrdist/cval/mds/indscal/matfiles/rdmSet_indscal_controlrdms_raw.mat');
+data <- readMat('rdmSet_indscal_controlrdms_raw.mat');
 
 
 nROI=4

@@ -11,7 +11,7 @@ function params = rsa_searchlight_params()
     params = struct();
 
     %% directories
-    params.dir.projectDir = '/media/timo/data/DPHIL_01_TREES_FMRI/Paper/code/';
+    params.dir.projectDir = '';
 
     params.dir.behavDir = [params.dir.projectDir 'Data/Humans/part3_fmri/behav/scan/'];
     params.dir.dissimDir = [params.dir.projectDir 'Data/Humans/part1_arena/'];
