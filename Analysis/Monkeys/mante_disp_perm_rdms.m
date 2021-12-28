@@ -2,7 +2,6 @@ function mante_disp_perm_rdms(results)
 %% mante_disp_permrdms(results)
 %
 % visualises average of simulated null rdms 
-% (sanity check, pray that I don't find structure...)
 % 
 % Timo Flesch,  2020
 
